@@ -1,0 +1,35 @@
+@mixin clearfix{
+	&:before,
+	&:after{
+		content:"";
+		display:table;
+	}
+	&:after{
+		clear:both;
+	}
+}
+
+@mixin breakWord{
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+@mixin noBreakWord{
+	white-space: nowrap;
+}
+
+@mixin flexbox(){
+	.flexbox{
+		display:flex;
+		display:flexbox;
+	}
+	.flexItem{
+		@include flexItem;
+	}
+}
+
+@mixin flexItem($base:1,$shrike:1,$grow:1){
+	flex-basis:$base;
+	flex-shrink: $shrike;
+	flex-grow: $grow;
+}

@@ -1,0 +1,13 @@
+/**private**/
+.item-wapper{
+	@include breakWord;
+}
+
+@include flexbox;
+
+.flexShrink{
+	width:600px;
+}
+.diffWidth{
+	@include flexItem(400px,2,1);
+}
